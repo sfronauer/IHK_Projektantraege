@@ -1,0 +1,28 @@
+services:
+  frontend_service:
+    container_name: frontend
+    build:
+      context: ./IHK_Projektantraege-Frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./IHK_Projektantraege-Frontend/app:/frontend/app
+    networks:
+      - ihk_network
+  backend_service:
+    container_name: backend
+    build:
+      context: ./IHK_Projektantraege-Webservice
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    volumes:
+      - ./IHK_Projektantraege-Webservice/src:/backend/src
+    networks:
+      - ihk_network
+    env_file:
+      - ./IHK_Projektantraege-Webservice/.env
+
+networks:
+  ihk_network:

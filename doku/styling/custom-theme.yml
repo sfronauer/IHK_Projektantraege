@@ -1,0 +1,9 @@
+extends: default
+footer:
+  columns: =100%
+  recto:
+    center:
+      content: '{page-number}'
+  verso:
+    center:
+      content: '{page-number}'
