@@ -1,4 +1,4 @@
-# Foodplanner
+# IHK-Project-Proposals
 
 > **Disclaimer:**  
 > This is a **learning and training project**, created as part of my vocational education.
